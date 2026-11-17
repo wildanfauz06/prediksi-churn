@@ -1,0 +1,113 @@
+{
+ "shape_raw": [
+  7043,
+  21
+ ],
+ "missing": {
+  "TotalCharges": 11
+ },
+ "duplicates": 22,
+ "churn_rate": 0.2653698707936959,
+ "churn_counts": {
+  "0": 5174,
+  "1": 1869
+ },
+ "outliers_iqr": {
+  "tenure": 0,
+  "MonthlyCharges": 0,
+  "TotalCharges": 0
+ },
+ "winner": "Random Forest",
+ "threshold": 0.49999999999999983,
+ "final_test": {
+  "accuracy": 0.7473385379701917,
+  "precision": 0.5157894736842106,
+  "recall": 0.786096256684492,
+  "f1": 0.6228813559322034,
+  "roc_auc": 0.8407954222532228
+ },
+ "cm": [
+  [
+   759,
+   276
+  ],
+  [
+   80,
+   294
+  ]
+ ],
+ "top_features": {
+  "tenure": 0.1559,
+  "Contract_Two year": 0.1301,
+  "InternetService_Fiber optic": 0.0936,
+  "PaymentMethod_Electronic check": 0.0731,
+  "TotalCharges": 0.055,
+  "Contract_One year": 0.0492,
+  "OnlineSecurity_Yes": 0.0486,
+  "PaperlessBilling_Yes": 0.0417,
+  "TenureGroup_49-72": 0.0399,
+  "TechSupport_Yes": 0.0357,
+  "AvgCharge": 0.0258,
+  "Dependents_Yes": 0.0241
+ },
+ "models": {
+  "Logistic Regression": {
+   "cv_f1": 0.6340293318491554,
+   "accuracy": 0.7416607523066004,
+   "precision": 0.5087719298245614,
+   "recall": 0.7754010695187166,
+   "f1": 0.614406779661017,
+   "roc_auc": 0.8389005140923299,
+   "pr_auc": 0.6314634596921319,
+   "best_params": {
+    "C": 0.01,
+    "penalty": "l2"
+   }
+  },
+  "Random Forest": {
+   "cv_f1": 0.6327839452293829,
+   "accuracy": 0.7473385379701917,
+   "precision": 0.5157894736842106,
+   "recall": 0.786096256684492,
+   "f1": 0.6228813559322034,
+   "roc_auc": 0.8407954222532228,
+   "pr_auc": 0.635420017837059,
+   "best_params": {
+    "n_estimators": 100,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "max_depth": 5
+   }
+  },
+  "Gradient Boosting": {
+   "cv_f1": 0.6335290891276947,
+   "accuracy": 0.7643718949609652,
+   "precision": 0.5430327868852459,
+   "recall": 0.7085561497326203,
+   "f1": 0.6148491879350348,
+   "roc_auc": 0.8413120979617142,
+   "pr_auc": 0.6492246135724504,
+   "best_params": {
+    "subsample": 1.0,
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.05
+   }
+  },
+  "SVM (RBF)": {
+   "cv_f1": 0.6243472798610721,
+   "accuracy": 0.7388218594748048,
+   "precision": 0.5051546391752577,
+   "recall": 0.786096256684492,
+   "f1": 0.6150627615062761,
+   "roc_auc": 0.837647575499238,
+   "pr_auc": 0.6346466553007974,
+   "best_params": {
+    "gamma": 0.01,
+    "C": 0.5
+   }
+  }
+ },
+ "n_train": 5634,
+ "n_test": 1409
+}
